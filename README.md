@@ -24,12 +24,6 @@ Watch the Demo Video on [Google Drive](https://drive.google.com/file/d/12xP4zOEF
   - Product name
   - Price per item
   - Quantity controls with + and - buttons
-- Price breakdown, including:
-  - Subtotal for selected items
-  - Shipping fee
-  - Total amount
-- Handles the empty cart state with user-friendly visual feedback.
-- Quantity adjustment with auto-remove functionality when the quantity reaches zero.
 
 ## Implementation Details 💻
 
@@ -51,7 +45,7 @@ Watch the Demo Video on [Google Drive](https://drive.google.com/file/d/12xP4zOEF
 
 1. Clone the Repository
 ```bash
-git clone [repository-url]
+git clone [https://github.com/31SUFI/Elegant-Grocery-App/]
 ```
 
 2. Install Dependencies
