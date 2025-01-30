@@ -2,7 +2,7 @@
 A modern Flutter e-commerce application for grocery shopping with smooth animations, category filtering, and a robust cart management system.
 
 ## App Demo 🎥
-Watch the Demo Video on [Google Drive](https://drive.google.com/file/d/12rRRdtBbLBgdcfvfpPjsdFXaJ35rLvJx/view?usp=drivesdk)
+Watch the Demo Video on [Google Drive](https://drive.google.com/file/d/12xP4zOEFGDWXUfQCkxOkUDoT_hQ1pz8G/view?usp=drivesdk)
 
 ## Features ✨
 
