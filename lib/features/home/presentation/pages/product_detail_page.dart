@@ -77,37 +77,51 @@ class ProductDetailPage extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 12,
-                                    vertical: 8,
-                                  ),
                                   decoration: BoxDecoration(
-                                    color: AppTheme.primaryColor,
-                                    borderRadius: BorderRadius.circular(20),
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(25),
                                   ),
                                   child: Row(
                                     children: [
-                                      const Icon(
-                                        Icons.remove,
-                                        color: Colors.white,
-                                        size: 20,
+                                      Container(
+                                        width: 35,
+                                        height: 35,
+                                        decoration: BoxDecoration(
+                                          color: Colors.black87,
+                                          borderRadius:
+                                              BorderRadius.circular(17.5),
+                                        ),
+                                        child: const Icon(
+                                          Icons.remove,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.symmetric(
-                                          horizontal: 12,
-                                        ),
+                                            horizontal: 12),
                                         child: Text(
                                           '1 kg',
                                           style: GoogleFonts.poppins(
-                                            color: Colors.white,
+                                            color: Colors.black87,
                                             fontWeight: FontWeight.w500,
+                                            fontSize: 16,
                                           ),
                                         ),
                                       ),
-                                      const Icon(
-                                        Icons.add,
-                                        color: Colors.white,
-                                        size: 20,
+                                      Container(
+                                        width: 35,
+                                        height: 35,
+                                        decoration: BoxDecoration(
+                                          color: Colors.black87,
+                                          borderRadius:
+                                              BorderRadius.circular(17.5),
+                                        ),
+                                        child: const Icon(
+                                          Icons.add,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
                                       ),
                                     ],
                                   ),
