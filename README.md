@@ -2,7 +2,7 @@
 A modern Flutter e-commerce application for grocery shopping with smooth animations, category filtering, and a robust cart management system.
 
 ## App Demo 🎥
-Watch the Demo Video on [Google Drive](your-google-drive-link)
+Watch the Demo Video on [Google Drive](https://drive.google.com/file/d/12rRRdtBbLBgdcfvfpPjsdFXaJ35rLvJx/view?usp=drivesdk)
 
 ## Features ✨
 
@@ -64,11 +64,12 @@ flutter pub get
 flutter run
 ```
 
-## Design  📸
-![image](https://github.com/user-attachments/assets/581ee8c2-5d89-4e10-97e6-62cf6b947376)
+## Design 📸
 
+![image](https://github.com/user-attachments/assets/72bf5f01-32a4-4054-aec4-2535cf4043bc)
 
-Watch design inspiration on [Instagram](https://www.instagram.com/p/DFVjRGVOV0L/?igsh=dWpxa2pzaTk2Zzlq&img_index=1)
+Watch the design on [Instagram](https://www.instagram.com/p/DFVjRGVOV0L/?igsh=dWpxa2pzaTk2Zzlq&img_index=1)
+
 
 ## Dependencies 🧩
 Add these dependencies to your pubspec.yaml file:
@@ -80,7 +81,7 @@ dependencies:
   google_fonts: ^6.1.0
   provider: ^6.1.1
   flutter_svg: ^2.0.10
- 
+
 ```
 
 ## Contributing 🤝
