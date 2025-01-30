@@ -9,7 +9,7 @@ class RoundedBottomCard extends StatelessWidget {
   const RoundedBottomCard({
     Key? key,
     required this.child,
-    this.height = 120,
+    this.height = 110,
     this.backgroundColor = Colors.white,
     this.padding = const EdgeInsets.all(16),
   }) : super(key: key);
@@ -22,8 +22,8 @@ class RoundedBottomCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: const BorderRadius.only(
-          bottomLeft: Radius.circular(50),
-          bottomRight: Radius.circular(50),
+          bottomLeft: Radius.circular(40),
+          bottomRight: Radius.circular(40),
         ),
         boxShadow: [
           BoxShadow(
