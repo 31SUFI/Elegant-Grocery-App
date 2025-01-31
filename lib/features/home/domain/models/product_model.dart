@@ -46,7 +46,21 @@ class DummyProducts {
       calories: 60,
       category: 'Fruits',
     ),
-    // Fast Food
+    Product(
+      name: 'Strawberry',
+      imagePath: 'assets/items/apples.png',
+      price: 16.99,
+      calories: 33,
+      category: 'Fruits',
+    ),
+    Product(
+      name: 'Grapes',
+      imagePath: 'assets/items/apples.png',
+      price: 15.99,
+      calories: 69,
+      category: 'Fruits',
+    ),
+    // Breakfast
     Product(
       name: 'Cereals',
       imagePath: 'assets/items/breakfast.jpg',
@@ -73,6 +87,20 @@ class DummyProducts {
       imagePath: 'assets/items/breakfast.jpg',
       price: 15.99,
       calories: 320,
+      category: 'BreakFast',
+    ),
+    Product(
+      name: 'Pancakes',
+      imagePath: 'assets/items/breakfast.jpg',
+      price: 22.99,
+      calories: 340,
+      category: 'BreakFast',
+    ),
+    Product(
+      name: 'Oatmeal',
+      imagePath: 'assets/items/breakfast.jpg',
+      price: 19.99,
+      calories: 280,
       category: 'BreakFast',
     ),
     // Vegetables
@@ -102,6 +130,20 @@ class DummyProducts {
       imagePath: 'assets/items/vegetables.jpg',
       price: 6.99,
       calories: 15,
+      category: 'Vegetables',
+    ),
+    Product(
+      name: 'Spinach',
+      imagePath: 'assets/items/vegetables.jpg',
+      price: 9.99,
+      calories: 23,
+      category: 'Vegetables',
+    ),
+    Product(
+      name: 'Bell Pepper',
+      imagePath: 'assets/items/vegetables.jpg',
+      price: 8.50,
+      calories: 31,
       category: 'Vegetables',
     ),
   ];
