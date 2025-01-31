@@ -33,7 +33,11 @@ class CustomSnackbar {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
         ),
-        margin: const EdgeInsets.all(16),
+        margin: EdgeInsets.only(
+          bottom: MediaQuery.of(context).size.height * 0.12, // 15% from bottom
+          left: 16,
+          right: 16,
+        ),
         duration: const Duration(seconds: 2),
         elevation: 4,
       ),
