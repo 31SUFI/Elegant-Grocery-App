@@ -5,7 +5,6 @@ import '../../../../core/widgets/custom_bottom_nav_bar.dart';
 import '../../../../core/widgets/rounded_bottom_card.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../../../core/widgets/category_chip.dart';
-import '../../domain/models/product_model.dart';
 import '../../../../core/widgets/product_card.dart';
 import 'package:provider/provider.dart';
 import '../providers/product_provider.dart';
@@ -19,7 +18,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  int _selectedCategoryIndex = 0;
 
   final List<String> _categories = [
     'Fruits',

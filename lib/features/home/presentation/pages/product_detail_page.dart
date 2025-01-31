@@ -32,9 +32,15 @@ class ProductDetailPage extends StatelessWidget {
                       // Back button
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
-                        child: IconButton(
-                          icon: const Icon(Icons.arrow_back_ios),
-                          onPressed: () => Navigator.pop(context),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.grey[200],
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: IconButton(
+                            icon: const Icon(Icons.arrow_back),
+                            onPressed: () => Navigator.pop(context),
+                          ),
                         ),
                       ),
                       // Product image
