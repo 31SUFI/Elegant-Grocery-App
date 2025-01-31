@@ -62,7 +62,7 @@ flutter run
 
 ![image](https://github.com/user-attachments/assets/72bf5f01-32a4-4054-aec4-2535cf4043bc)
 
-Watch the design on [Instagram](https://www.instagram.com/p/DFVjRGVOV0L/?igsh=dWpxa2pzaTk2Zzlq&img_index=1)
+ Design Credit [Instagram](https://www.instagram.com/p/DFVjRGVOV0L/?igsh=dWpxa2pzaTk2Zzlq&img_index=1)
 
 
 ## Dependencies 🧩
