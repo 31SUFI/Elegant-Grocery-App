@@ -7,6 +7,8 @@ import '../../../../core/theme/app_theme.dart';
 import '../../../../core/widgets/category_chip.dart';
 import '../../domain/models/product_model.dart';
 import '../../../../core/widgets/product_card.dart';
+import 'package:provider/provider.dart';
+import '../providers/product_provider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -27,6 +29,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final productProvider = Provider.of<ProductProvider>(context);
+
     return Scaffold(
       backgroundColor: AppTheme.primaryColor,
       body: Stack(
@@ -69,11 +73,11 @@ class _HomePageState extends State<HomePage> {
                               _categories.length,
                               (index) => CategoryChip(
                                 label: _categories[index],
-                                isSelected: _selectedCategoryIndex == index,
+                                isSelected: productProvider.selectedCategory ==
+                                    _categories[index],
                                 onTap: () {
-                                  setState(() {
-                                    _selectedCategoryIndex = index;
-                                  });
+                                  productProvider
+                                      .changeCategory(_categories[index]);
                                 },
                               ),
                             ),
@@ -116,10 +120,9 @@ class _HomePageState extends State<HomePage> {
                                 crossAxisSpacing: 16,
                                 mainAxisSpacing: 16,
                               ),
-                              itemCount: DummyProducts.popularFruits.length,
+                              itemCount: productProvider.products.length,
                               itemBuilder: (context, index) {
-                                final product =
-                                    DummyProducts.popularFruits[index];
+                                final product = productProvider.products[index];
                                 return InkWell(
                                   onTap: () {
                                     Navigator.push(

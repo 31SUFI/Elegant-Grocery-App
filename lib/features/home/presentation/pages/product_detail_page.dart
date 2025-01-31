@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../../core/widgets/rounded_bottom_card.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../domain/models/product_model.dart';
+import 'package:provider/provider.dart';
+import '../providers/cart_provider.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final Product product;
@@ -84,44 +86,62 @@ class ProductDetailPage extends StatelessWidget {
                                   ),
                                   child: Row(
                                     children: [
-                                      Container(
-                                        width: 35,
-                                        height: 35,
-                                        decoration: BoxDecoration(
-                                          color: Colors.black87,
-                                          borderRadius:
-                                              BorderRadius.circular(17.5),
-                                        ),
-                                        child: const Icon(
-                                          Icons.remove,
-                                          color: Colors.white,
-                                          size: 20,
+                                      GestureDetector(
+                                        onTap: () {
+                                          context
+                                              .read<CartProvider>()
+                                              .decrementQuantity(product);
+                                        },
+                                        child: Container(
+                                          width: 35,
+                                          height: 35,
+                                          decoration: BoxDecoration(
+                                            color: Colors.black87,
+                                            borderRadius:
+                                                BorderRadius.circular(17.5),
+                                          ),
+                                          child: const Icon(
+                                            Icons.remove,
+                                            color: Colors.white,
+                                            size: 20,
+                                          ),
                                         ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 12),
-                                        child: Text(
-                                          '1 kg',
-                                          style: GoogleFonts.poppins(
-                                            color: Colors.black87,
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 16,
-                                          ),
+                                        child: Consumer<CartProvider>(
+                                          builder: (context, cart, child) {
+                                            return Text(
+                                              '${cart.getQuantity(product)} kg',
+                                              style: GoogleFonts.poppins(
+                                                color: Colors.black87,
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 16,
+                                              ),
+                                            );
+                                          },
                                         ),
                                       ),
-                                      Container(
-                                        width: 35,
-                                        height: 35,
-                                        decoration: BoxDecoration(
-                                          color: Colors.black87,
-                                          borderRadius:
-                                              BorderRadius.circular(17.5),
-                                        ),
-                                        child: const Icon(
-                                          Icons.add,
-                                          color: Colors.white,
-                                          size: 20,
+                                      GestureDetector(
+                                        onTap: () {
+                                          context
+                                              .read<CartProvider>()
+                                              .incrementQuantity(product);
+                                        },
+                                        child: Container(
+                                          width: 35,
+                                          height: 35,
+                                          decoration: BoxDecoration(
+                                            color: Colors.black87,
+                                            borderRadius:
+                                                BorderRadius.circular(17.5),
+                                          ),
+                                          child: const Icon(
+                                            Icons.add,
+                                            color: Colors.white,
+                                            size: 20,
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -167,7 +187,7 @@ class ProductDetailPage extends StatelessWidget {
                               title: Row(
                                 children: [
                                   Text(
-                                    'Victor Flexin',
+                                    'Sheharyar',
                                     style: GoogleFonts.poppins(
                                       fontWeight: FontWeight.w500,
                                     ),

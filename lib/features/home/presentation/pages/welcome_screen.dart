@@ -20,8 +20,8 @@ class WelcomeScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: AspectRatio(
                   aspectRatio: 1,
-                  child: SvgPicture.string(
-                    paymentProcessIllistration,
+                  child: SvgPicture.asset(
+                    'assets/items/hello.svg',
                     fit: BoxFit.scaleDown,
                   ),
                 ),
@@ -115,7 +115,3 @@ class WelcomeInfo extends StatelessWidget {
     );
   }
 }
-
-const paymentProcessIllistration = '''
-// ... your SVG string ...
-''';
