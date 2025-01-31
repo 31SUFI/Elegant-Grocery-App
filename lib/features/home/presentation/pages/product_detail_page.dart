@@ -5,6 +5,7 @@ import '../../../../core/theme/app_theme.dart';
 import '../../domain/models/product_model.dart';
 import 'package:provider/provider.dart';
 import '../providers/cart_provider.dart';
+import '../../../../core/utils/custom_snackbar.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final Product product;
@@ -255,8 +256,16 @@ class ProductDetailPage extends StatelessWidget {
                   child: SizedBox(
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.read<CartProvider>().addToCart(product);
+                        CustomSnackbar.show(
+                          context: context,
+                          message:
+                              '${product.name} added to cart successfully!',
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(double.infinity, 50),
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
@@ -264,13 +273,28 @@ class ProductDetailPage extends StatelessWidget {
                         elevation: 0,
                         padding: EdgeInsets.zero,
                       ),
-                      child: Text(
-                        'Add to cart',
-                        style: GoogleFonts.poppins(
-                          color: AppTheme.primaryColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            context.watch<CartProvider>().isInCart(product)
+                                ? Icons.check_circle
+                                : Icons.shopping_cart_outlined,
+                            color: AppTheme.primaryColor,
+                            size: 20,
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            context.watch<CartProvider>().isInCart(product)
+                                ? 'Added to Cart'
+                                : 'Add to Cart',
+                            style: GoogleFonts.poppins(
+                              color: AppTheme.primaryColor,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
