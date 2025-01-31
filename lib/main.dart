@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
-import 'features/home/presentation/pages/home_page.dart';
+import 'features/home/presentation/pages/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Grocery App',
       theme: AppTheme.lightTheme,
-      home: const HomePage(),
+      home: const WelcomeScreen(),
     );
   }
 }

@@ -35,8 +35,9 @@ class ProductDetailPage extends StatelessWidget {
                         ),
                       ),
                       // Product image
-                      SizedBox(
+                      Container(
                         height: MediaQuery.of(context).size.height * 0.3,
+                        width: double.infinity,
                         child: Center(
                           child: Image.asset(
                             product.imagePath,
@@ -156,7 +157,12 @@ class ProductDetailPage extends StatelessWidget {
                               contentPadding: EdgeInsets.zero,
                               leading: CircleAvatar(
                                 backgroundColor: Colors.grey[200],
-                                child: const Icon(Icons.person),
+                                child: Image.asset(
+                                  'assets/items/profile.png',
+                                  width: 24,
+                                  height: 24,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                               title: Row(
                                 children: [
